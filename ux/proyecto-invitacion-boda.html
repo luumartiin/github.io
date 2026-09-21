@@ -107,7 +107,7 @@
             line-height: 1.6;
         }
 
-        /* ESTILO PARA LA IMAGEN PEQUEÑA DE LA DERECHA */
+        /* ESTILO PARA LA IMAGEN SECUNDARIA DE LA DERECHA */
         .detail-info img.small-img {
             max-width: 85%;
             height: auto;
@@ -116,13 +116,37 @@
             margin-bottom: 2rem;
         }
 
+        /* ===== REORDENACIÓN Y ESTILOS PARA MÓVIL ===== */
         @media (max-width: 800px) {
             .detail-container {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
             }
-            .detail-info img.small-img {
-                max-width: 60%;
+
+            .detail-info {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            /* Reordenamos elementos dentro del bloque de información */
+            .detail-info .item-title { order: 1; }
+            .detail-info .item-meta { order: 2; }
+            .detail-info .small-img { 
+                order: 3; 
+                max-width: 100%; /* Se hace más grande en móvil */
+                width: 100%;
+                margin-top: 0.5rem;
+                margin-bottom: 1.5rem;
+            }
+            .detail-info .item-text-1 { order: 4; }
+            .detail-info .item-text-2 { order: 5; }
+
+            /* Las 3 imágenes de la galería quedan al final */
+            .detail-image {
+                order: 2; 
+                width: 100%;
             }
         }
     </style>
@@ -135,21 +159,23 @@
 
     <main class="detail-container">
         
+        <!-- Galería de imágenes (Aparecerá abajo en móvil) -->
         <div class="detail-image"> 
             <img src="../static/images/Sobre _001-Photoroom.png" alt="Sobre artesanal con gofrado">
             <img src="../static/images/Invitación 1_001-3.jpg" alt="Invitación principal">  
             <img src="../static/images/Invitación 1_001-Photoroom.jpg" alt="Invitación de boda en interior">
         </div>
 
+        <!-- Columna de información -->
         <div class="detail-info">
-            <h3>INVITACIÓN DE BODA</h3>
-            <p class="meta">Sevilla. 2026.</p>
+            <h3 class="item-title">INVITACIÓN DE BODA</h3>
+            <p class="meta item-meta">Sevilla. 2026.</p>
             
-            <!-- Imagen reducida -->
+            <!-- Imagen reducida (Aparece 3ª en móvil y más grande) -->
             <img src="../static/images/IMG_7006.HEIC" alt="Detalle proceso de caligrafía" class="small-img">
 
-            <p class="meta">Desarrollo de 200 invitaciones para 400 invitados.</p>
-            <p class="meta">En el proyecto se priorizó desde el primer instante el valor del trabajo hecho a mano, buscando el detalle y textura únicas que aportan las técnicas tradicionales frente a los acabados puramente digitales. Las ilustraciones originales en acuarela y la caligrafía a pluma se crearon de manera totalmente artesanal para, posteriormente, ser digitalizadas e impresas a gran escala.</p>
+            <p class="meta item-text-1">Desarrollo de 200 invitaciones para 400 invitados.</p>
+            <p class="meta item-text-2">En el proyecto se priorizó desde el primer instante el valor del trabajo hecho a mano, buscando el detalle y textura únicas que aportan las técnicas tradicionales frente a los acabados puramente digitales. Las ilustraciones originales en acuarela y la caligrafía a pluma se crearon de manera totalmente artesanal para, posteriormente, ser digitalizadas e impresas a gran escala.</p>
         </div>
 
     </main>
