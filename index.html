@@ -94,7 +94,11 @@
 
         /* Espaciado vertical entre secciones */
         section {
-            padding: 2.5rem 0;
+            padding: 1.5rem 0;
+        }
+
+        #proyectos {
+            padding-bottom: 0.5rem;
         }
 
         .section-title {
@@ -111,7 +115,7 @@
         .works-editorial {
             column-count: 3;
             column-gap: 2rem;
-            margin-bottom: 1rem;
+            margin-bottom: 0;
         }
 
         .work-item {
@@ -421,6 +425,11 @@
             .dates {
                 margin-bottom: 0.2rem;
             }
+
+            /* Espacio extra en móvil después del bloque de Amancio Ortega */
+            .item-amancio {
+                margin-bottom: 2rem;
+            }
         }
 
         /* Dispositivos táctiles / móviles (Animaciones automáticas) */
@@ -568,7 +577,7 @@
                     <span class="dates">2019 — 2020</span>
                 </article>
 
-                <article class="about-item">
+                <article class="about-item item-amancio">
                     <div class="about-meta">
                         <p class="bold-text">Oakridge Secondary School, London, Canadá.</p>
                         <p>Año académico en el extranjero gracias al Programa de Becas de la Fundación Amancio Ortega.</p>
@@ -669,7 +678,7 @@
                 </div>
             </div>
         </section>
-    </main>
+</main>
 
 </body>
 </html>
