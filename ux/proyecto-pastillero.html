@@ -128,17 +128,40 @@
             max-width: 85%;
             height: auto;
             display: block;
-            margin-top: 1rem;
+            margin-top: 0.5rem;
             margin-bottom: 1.5rem;
         }
 
+        /* ===== REORDENACIÓN Y ESTILOS PARA MÓVIL ===== */
         @media (max-width: 800px) {
             .detail-container {
-                grid-template-columns: 1fr;
-                gap: 2.5rem;
+                display: flex;
+                flex-direction: column;
+                gap: 2rem;
             }
-            .detail-info img.small-img {
-                max-width: 60%;
+
+            .detail-info {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+            }
+
+            /* Reordenamos elementos dentro del bloque de información */
+            .detail-info .item-title { order: 1; }
+            .detail-info .item-meta { order: 2; }
+            .detail-info .small-img { 
+                order: 3; 
+                max-width: 100%; /* Ocupa más ancho en pantalla pequeña */
+                width: 100%;
+            }
+            .detail-info .item-text-1 { order: 4; }
+            .detail-info .item-text-2 { order: 5; }
+            .detail-info .item-text-3 { order: 6; }
+
+            /* Los vídeos se posicionan al final */
+            .detail-image {
+                order: 2; 
+                width: 100%;
             }
         }
     </style>
@@ -151,7 +174,7 @@
 
     <main class="detail-container">
         
-        <!-- Columna izquierda con los vídeos -->
+        <!-- Columna izquierda con los vídeos (Aparece al final en móvil) -->
         <div class="detail-image"> 
             <video autoplay loop muted playsinline controls>
                 <source src="../static/media/video1.mov" type="video/mp4">
@@ -169,18 +192,18 @@
 
         <!-- Columna derecha con la información -->
         <div class="detail-info">
-            <h3>PASTILLERO</h3>
-            <p class="meta">Proyecto de modelación 3D con desarrollo electrónico. 2026.</p>
+            <h3 class="item-title">PASTILLERO</h3>
+            <p class="meta item-meta">Proyecto de modelación 3D con desarrollo electrónico. 2026.</p>
             
             <!-- Imágenes secundarias -->
             <img src="../static/images/foto1.heic" alt="Proceso de diseño" class="small-img">
             <img src="../static/images/fotofinal.jpg" alt="Resultado final" class="small-img">
 
-            <p class="meta">Dispositivo diseñado para automatizar la medicación diaria en personas mayores o con deterioro cognitivo.</p>
+            <p class="meta item-text-1">Dispositivo diseñado para automatizar la medicación diaria en personas mayores o con deterioro cognitivo.</p>
             
-            <p class="description">El sistema integra una aplicación para el móvil para cuidadores o personal sanitario, un pastillero, construido mediante impresión 3D, que selecciona y desplaza automáticamente la dosis correspondiente al compartimento de salida, y un reloj con alerta por vibración sincronizado con el pastillero.</p>
+            <p class="description item-text-2">El sistema integra una aplicación para el móvil para cuidadores o personal sanitario, un pastillero, construido mediante impresión 3D, que selecciona y desplaza automáticamente la dosis correspondiente al compartimento de salida, y un reloj con alerta por vibración sincronizado con el pastillero.</p>
             
-            <p class="description">Al recibir el aviso táctil en la muñeca, el usuario simplemente recoge la dosis ya lista, garantizando una toma accesible, segura y sin confusiones.</p>
+            <p class="description item-text-3">Al recibir el aviso táctil en la muñeca, el usuario simplemente recoge la dosis ya lista, garantizando una toma accesible, segura y sin confusiones.</p>
         </div>
 
     </main>
