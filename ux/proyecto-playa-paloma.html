@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Playa de la Paloma</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #fafafa;
+            --text-color: #1a1a1a;
+            --font-main: "Bodoni Moda", Didot, "Times New Roman", serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            -webkit-font-smoothing: antialiased;
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* ===== ENLACE DE REGRESO ===== */
+        .back-nav {
+            margin-bottom: 3rem;
+        }
+
+        .back-btn {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-family: 'Instrument Serif', serif;
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            display: inline-block;
+            transform: scaleY(1.4);
+            transition: opacity 0.2s;
+        }
+
+        .back-btn:hover {
+            opacity: 0.5;
+        }
+
+        /* ===== CONTENEDOR PRINCIPAL ===== */
+        .detail-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .detail-image {
+            width: 100%;
+        }
+
+        .detail-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+
+        .detail-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        /* TÍTULO */
+        .detail-info h3 {
+            color: rgba(0, 0, 0, 1);
+            font-family: "Instrument Serif", serif;
+            font-style: normal;
+            letter-spacing: 0px;
+            font-size: 22px;
+            font-weight: 400;
+            display: inline-block;
+            transform: scaleY(1.2);
+            margin-bottom: 1.2rem;
+        }
+
+        /* METADATOS (LÍNEA CORTA) */
+        .detail-info p.meta {
+            color: rgba(0, 0, 0, 1);
+            font-family: "Instrument Serif";
+            font-style: normal;
+            letter-spacing: 0px;
+            font-size: 18px;
+            font-weight: 400;
+            display: inline-block;
+            transform: scaleY(1.2);
+            margin-bottom: 1.2rem;
+        }
+
+        /* DESCRIPCIÓN (PÁRRAFO MULTILÍNEA) */
+        .detail-info p.description {
+          color: rgba(0, 0, 0, 1);
+            font-family: "Instrument Serif";
+            font-style: normal;
+            letter-spacing: 0px;
+            font-size: 18px;
+            font-weight: 400;
+            display: inline-block;
+            transform: scaleY(1.2);
+            margin-bottom: 1.2rem;
+        }
+
+        @media (max-width: 800px) {
+            .detail-container {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="back-nav">
+        <a href="index.html" class="back-btn">← Volver al Portfolio</a>
+    </nav>
+
+    <main class="detail-container">
+        
+        <div class="detail-image">
+            <img src="cala-mar.jpg" alt="Playa de la Paloma, Asturias">
+        </div>
+
+        <div class="detail-info">
+            <h3>"PLAYA DE LA PALOMA"</h3>
+            <p class="meta">Óleo sobre madera. 2025.</p>
+        </div>
+
+    </main>
+
+</body>
+</html>

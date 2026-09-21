@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto pastillero</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400;0,6..96,500;0,6..96,600;0,6..96,700;1,6..96,400;1,6..96,500&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet">
+
+    <style>
+        :root {
+            --bg-color: #fafafa;
+            --text-color: #1a1a1a;
+            --font-main: "Bodoni Moda", Didot, "Times New Roman", serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            -webkit-font-smoothing: antialiased;
+            padding: 3rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* ===== ENLACE DE REGRESO ===== */
+        .back-nav {
+            margin-bottom: 3rem;
+        }
+
+        .back-btn {
+            color: #1a1a1a;
+            text-decoration: none;
+            font-family: 'Instrument Serif', serif;
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: 0px;
+            display: inline-block;
+            transform: scaleY(1.4);
+            transition: opacity 0.2s;
+        }
+
+        .back-btn:hover {
+            opacity: 0.5;
+        }
+
+        /* ===== CONTENEDOR PRINCIPAL ===== */
+        .detail-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .detail-image {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        /* ESTILOS PARA LOS VÍDEOS */
+        .detail-image video {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 2px;
+        }
+
+        .detail-info {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        /* TÍTULO */
+        .detail-info h3 {
+            color: rgba(0, 0, 0, 1);
+            font-family: "Instrument Serif", serif;
+            font-style: normal;
+            letter-spacing: 0px;
+            font-size: 22px;
+            font-weight: 400;
+            display: inline-block;
+            transform: scaleY(1.2);
+            margin-bottom: 1.2rem;
+        }
+
+        /* METADATOS Y SUBTÍTULOS CORTOS */
+        .detail-info p.meta {
+            color: rgba(0, 0, 0, 1);
+            font-family: "Instrument Serif", serif;
+            font-style: normal;
+            letter-spacing: 0px;
+            font-size: 18px;
+            font-weight: 400;
+            display: inline-block;
+            transform: scaleY(1.2);
+            margin-bottom: 1.2rem;
+        }
+
+        /* DESCRIPCIÓN EN PÁRRAFO COMPLETO */
+        .detail-info p.description {
+            color: rgba(0, 0, 0, 1);
+            font-family: "Instrument Serif", serif;
+            font-style: normal;
+            letter-spacing: 0px;
+            font-size: 18px;
+            font-weight: 400;
+            line-height: 1.6;
+            margin-bottom: 1.2rem;
+            display: inline-block;
+            transform: scaleY(1.2);
+        }
+
+        /* ESTILO PARA LA IMAGEN PEQUEÑA DE LA DERECHA */
+        .detail-info img.small-img {
+            max-width: 85%;
+            height: auto;
+            display: block;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        @media (max-width: 800px) {
+            .detail-container {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+            }
+            .detail-info img.small-img {
+                max-width: 60%;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="back-nav">
+        <a href="index.html" class="back-btn">← Volver al Portfolio</a>
+    </nav>
+
+    <main class="detail-container">
+        
+        <!-- Columna izquierda con los vídeos -->
+        <div class="detail-image"> 
+            <video autoplay loop muted playsinline controls>
+                <source src="video1.mov" type="video/mp4">
+                Tu navegador no soporta la reproducción de este vídeo.
+            </video>
+            <video autoplay loop muted playsinline controls>
+                <source src="video2.mov" type="video/mp4">
+                Tu navegador no soporta la reproducción de este vídeo.
+            </video>  
+            <video autoplay loop muted playsinline controls>
+                <source src="video3.mov" type="video/mp4">
+                Tu navegador no soporta la reproducción de este vídeo.
+            </video>
+        </div>
+
+        <!-- Columna derecha con la información -->
+        <div class="detail-info">
+            <h3>PASTILLERO</h3>
+            <p class="meta">Proyecto de modelación 3D con desarrollo electrónico. 2026.</p>
+            
+            <!-- Imagen reducida -->
+             
+            <img src="foto1.heic" alt="resultado final" class="small-img">
+            <img src="fotofinal.jpg" alt="resultado final" class="small-img">
+
+            <p class="meta">Dispositivo diseñado para automatizar la medicación diaria en personas
+                 mayores o con deterioro cognitivo.</p>
+            
+            <div><p class="description">
+                 El sistema integra una aplicación para el móvil
+                para cuidadores o personal sanitario, un pastillero, construido mediante impresión 3D, 
+                que selecciona y desplaza automáticamente la dosis correspondiente al compartimento de salida, 
+                y un reloj con alerta por vibración sincronizado con el pastillero.</p></div>
+            <div><p class="description">Al recibir el aviso táctil en la muñeca, el usuario simplemente recoge la dosis ya lista, garantizando una toma accesible, segura y sin confusiones
+            </p></div>
+        </div>
+
+    </main>
+
+</body>
+</html>
