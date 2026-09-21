@@ -50,7 +50,7 @@
         }
 
         .header-title h1 {
-            font-family: Instrument Serif;
+            font-family: Instrument Serif, var(--font-main);
             font-style: normal;
             font-size: 22px;
             font-weight: 400;
@@ -59,20 +59,25 @@
         }
 
         .header-title p {
-            color: Instrument Serif;
+            font-family: Instrument Serif, var(--font-main);
             font-size: 1.05rem;
             font-weight: 400;
             font-style: italic;
         }
 
+        nav {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1.5rem;
+        }
+
         nav a {
             color: #1a1a1a;
             text-decoration: none;
-            font-family: 'Instrument Serif', serif;
+            font-family: 'Instrument Serif', var(--font-main);
             font-size: 24px;
             font-weight: 400;
             letter-spacing: 0px;
-            margin-left: 2.5rem;
             display: inline-block;
             transform: scaleY(1.4);
             transition: opacity 0.2s;
@@ -87,13 +92,13 @@
             margin: 0 auto;
         }
 
-        /* Reducido el espaciado vertical entre secciones */
+        /* Espaciado vertical entre secciones */
         section {
             padding: 2.5rem 0;
         }
 
         .section-title {
-            font-family: Instrument Serif;
+            font-family: Instrument Serif, var(--font-main);
             font-style: normal;
             font-size: 24px;
             font-weight: 400;
@@ -142,20 +147,6 @@
             transform: scale(1.02);
         }
 
-        /* Cuadrícula para las 4 fases del toro */
-        .work-item .work-media--grid4 {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            grid-template-rows: 1fr 1fr;
-            gap: 4px;
-        }
-
-        .work-item .work-media--grid4 img {
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
         /* Efecto cambio de imagen al pasar el ratón (Hover flip) */
         .work-media--hover {
             position: relative;
@@ -166,6 +157,7 @@
             top: 0;
             left: 0;
             opacity: 0;
+            transition: opacity 0.5s ease;
         }
 
         .work-media--hover:hover img.img-hover {
@@ -184,7 +176,7 @@
 
         .work-caption h3 {
             color: rgba(0, 0, 0, 1);
-            font-family: "Instrument Serif";
+            font-family: "Instrument Serif", var(--font-main);
             font-style: normal;
             letter-spacing: 0px;
             font-size: 15px;
@@ -196,7 +188,7 @@
 
         .work-caption .meta {
             color: rgba(0, 0, 0, 1);
-            font-family: "Instrument Serif";
+            font-family: "Instrument Serif", var(--font-main);
             font-style: normal;
             letter-spacing: 0px;
             font-size: 15px;
@@ -213,7 +205,7 @@
 
         .skill-group h3 {
             color: rgba(0, 0, 0, 1);
-            font-family: "Instrument Serif";
+            font-family: "Instrument Serif", var(--font-main);
             font-style: normal;
             letter-spacing: 0px;
             font-size: 15px;
@@ -225,7 +217,7 @@
 
         .skill-group p {
             color: rgba(0, 0, 0, 1);
-            font-family: "Instrument Serif";
+            font-family: "Instrument Serif", var(--font-main);
             font-style: normal;
             letter-spacing: 0px;
             font-size: 15px;
@@ -247,7 +239,7 @@
 
         .dates {
             color: rgba(0, 0, 0, 1);
-            font-family: "Instrument Serif";
+            font-family: "Instrument Serif", var(--font-main);
             font-style: normal;
             letter-spacing: 0px;
             font-size: 22px;
@@ -259,7 +251,7 @@
 
         .about-item h3 {
             color: rgba(0, 0, 0, 1);
-            font-family: "Instrument Serif";
+            font-family: "Instrument Serif", var(--font-main);
             font-style: normal;
             letter-spacing: 0px;
             font-size: 15px;
@@ -271,12 +263,12 @@
 
         .about-item p {
             color: rgba(0, 0, 0, 1);
-            font-family: "Instrument Serif";
+            font-family: "Instrument Serif", var(--font-main);
             font-style: normal;
             letter-spacing: 0px;
             font-size: 15px;
             font-weight: 400;
-            display: inline-block;
+            display: block;
             transform: scaleY(1.4);
             margin-bottom: 1.2rem;
         }
@@ -295,7 +287,7 @@
 
         .contact-info p {
             color: rgba(0, 0, 0, 1);
-            font-family: "Instrument Serif";
+            font-family: "Instrument Serif", var(--font-main);
             font-style: normal;
             letter-spacing: 0px;
             font-size: 15px;
@@ -306,23 +298,12 @@
         .contact-info a {
             text-decoration: none;
             color: rgba(0, 0, 0, 1);
-            font-family: "Instrument Serif";
+            font-family: "Instrument Serif", var(--font-main);
             font-style: normal;
             letter-spacing: 0px;
             font-size: 15px;
             font-weight: 400;
             transform: scaleY(1.4);
-        }
-
-        /* ===== RESPONSIVE ===== */
-        @media (max-width: 900px) {
-            .works-editorial {
-                column-count: 1;
-            }
-            nav a {
-                margin-left: 1.5rem;
-                font-size: 20px;
-            }
         }
 
         /* ===== SECUENCIA SUAVE CON DESVANECIDO (FADE) ===== */
@@ -350,6 +331,7 @@
             opacity: 1;
         }
 
+        /* Animación activa al pasar el ratón (Escritorio) */
         .work-media--sequence:hover .img-1 { animation: playSoftSeq1 4s infinite; }
         .work-media--sequence:hover .img-2 { animation: playSoftSeq2 4s infinite; }
         .work-media--sequence:hover .img-3 { animation: playSoftSeq3 4s infinite; }
@@ -378,6 +360,67 @@
             75%, 95%  { opacity: 1; }
             100%      { opacity: 0; }
         }
+
+        /* Animación para el cambio de foto en Invitación Boda (Móvil) */
+        @keyframes toggleHoverImg {
+            0%, 45% { opacity: 0; }
+            50%, 95% { opacity: 1; }
+            100% { opacity: 0; }
+        }
+
+        @keyframes toggleMainImg {
+            0%, 45% { opacity: 1; }
+            50%, 95% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        /* ===== RESPONSIVE & ADAPTACIONES MÓVIL ===== */
+        @media (max-width: 900px) {
+            header {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 2rem;
+                padding: 2rem 0 1.5rem 0;
+            }
+
+            nav {
+                flex-direction: column;
+                gap: 1rem;
+            }
+
+            nav a {
+                margin-left: 0;
+                font-size: 20px;
+            }
+
+            .works-editorial {
+                column-count: 1;
+            }
+
+            .about-grid {
+                grid-template-columns: 1fr;
+                gap: 0.5rem;
+            }
+
+            .dates {
+                margin-bottom: 0.2rem;
+            }
+        }
+
+        /* Dispositivos táctiles / móviles (Animaciones automáticas) */
+        @media (hover: none) {
+            .work-media--sequence .img-1 { animation: playSoftSeq1 4s infinite; }
+            .work-media--sequence .img-2 { animation: playSoftSeq2 4s infinite; }
+            .work-media--sequence .img-3 { animation: playSoftSeq3 4s infinite; }
+            .work-media--sequence .img-4 { animation: playSoftSeq4 4s infinite; }
+
+            .work-media--hover img.img-hover {
+                animation: toggleHoverImg 4s infinite;
+            }
+            .work-media--hover img.img-main {
+                animation: toggleMainImg 4s infinite;
+            }
+        }
     </style>
 </head>
 <body>
@@ -405,7 +448,7 @@
 
                 <!-- COLUMNA 1 (Torero -> Alcázar de Sevilla) -->
                 <article class="work-item">
-                    <a href="proyecto-torero.html" class="work-media-link">
+                    <a href="ux/proyecto-torero.html" class="work-media-link">
                         <div class="work-media work-media--sequence">
                             <img src="static/images/foto1.jpg" alt="Fase 1" class="seq-img img-1">
                             <img src="static/images/foto2.jpg" alt="Fase 2" class="seq-img img-2">
@@ -420,7 +463,7 @@
                 </article>
 
                 <article class="work-item">
-                    <a href="proyecto-alcazar-sevilla.html" class="work-media-link">
+                    <a href="ux/proyecto-alcazar-sevilla.html" class="work-media-link">
                         <div class="work-media">
                             <img src="static/images/fuente-roja.jpg" alt="Fuente de piedra sobre muro rojo con hiedra">
                         </div>
@@ -433,7 +476,7 @@
 
                 <!-- COLUMNA 2 (Playa de la Paloma -> Invitación de Boda) -->
                 <article class="work-item">
-                    <a href="proyecto-playa-paloma.html" class="work-media-link">
+                    <a href="ux/proyecto-playa-paloma.html" class="work-media-link">
                         <div class="work-media">
                             <img src="static/images/cala-mar.jpg" alt="Playa de la Paloma, Asturias">
                         </div>
@@ -445,7 +488,7 @@
                 </article>
 
                 <article class="work-item">
-                    <a href="proyecto-invitacion-boda.html" class="work-media-link">
+                    <a href="ux/proyecto-invitacion-boda.html" class="work-media-link">
                         <div class="work-media work-media--hover">
                             <img src="static/images/Sobre _001-Photoroom.png" alt="Sobre artesanal con gofrado" class="img-main">
                             <img src="static/images/Invitación 1_001-Photoroom.jpg" alt="Invitación de boda en interior" class="img-hover">
@@ -459,7 +502,7 @@
 
                 <!-- COLUMNA 3 (Bailarinas -> Pastillero) -->
                 <article class="work-item">
-                    <a href="proyecto-bailarinas.html" class="work-media-link">
+                    <a href="ux/proyecto-bailarinas.html" class="work-media-link">
                         <div class="work-media">
                             <img src="static/images/bailarinas.jpg" alt="Bailarinas en pastel">
                         </div>
@@ -471,7 +514,7 @@
                 </article>
 
                 <article class="work-item">
-                    <a href="proyecto-pastillero.html" class="work-media-link">
+                    <a href="ux/proyecto-pastillero.html" class="work-media-link">
                         <div class="work-media">
                             <img src="static/images/portada.jpg" alt="Pastillero">
                         </div>
@@ -496,12 +539,11 @@
                     <span class="dates">2021 — 2027</span>
                 </article>
 
-                <!-- ETSIT -->
                 <article class="about-item">
                     <div class="about-meta">
                         <p class="bold-text">Escuela Técnica Superior de Ingenieros de Telecomunicación (ETSIT), Madrid.</p>
                         <h3>Grado en Ingeniería de Tecnologías y Servicios de Telecomunicación.</h3>
-                        <div> <p>Especialidad en electrónica.</p> </div>
+                        <p>Especialidad en electrónica.</p>
                     </div>
                 </article>
 
@@ -510,12 +552,11 @@
                     <span class="dates">2019 — 2020</span>
                 </article>
 
-                <!-- Oakridge Secondary School -->
                 <article class="about-item">
                     <div class="about-meta">
                         <p class="bold-text">Oakridge Secondary School, London, Canadá.</p>
-                        <div> <p>Año académico en el extranjero gracias al Programa de Becas de la Fundación Amancio Ortega.</p> </div>
-                        <div> <p>Seleccionada entre más de 10.000 solicitantes para una de las 600 becas completas que la Fundación concede anualmente a estudiantes españoles para cursar 1º de Bachillerato en Canadá o Estados Unidos.</p> </div>
+                        <p>Año académico en el extranjero gracias al Programa de Becas de la Fundación Amancio Ortega.</p>
+                        <p>Seleccionada entre más de 10.000 solicitantes para una de las 600 becas completas que la Fundación concede anualmente a estudiantes españoles para cursar 1º de Bachillerato en Canadá o Estados Unidos.</p>
                     </div>
                 </article>
 
@@ -524,12 +565,11 @@
                     <span class="dates">2006 — 2021</span>
                 </article>
 
-                <!-- Mater Salvatoris -->
                 <article class="about-item">
                     <div class="about-meta">
                         <p class="bold-text">Colegio Mater Salvatoris, Madrid.</p>
-                        <div><h3>Bachillerato de Ciencias y Tecnología.</h3></div>
-                        <div> <p>Diploma de mención honorífica por rendimiento académico (Comunidad de Madrid).</p> </div>
+                        <h3>Bachillerato de Ciencias y Tecnología.</h3>
+                        <p>Diploma de mención honorífica por rendimiento académico (Comunidad de Madrid).</p>
                     </div>
                 </article>
 
@@ -542,14 +582,14 @@
             <div class="skills-grid">
                 <div class="skill-group">
                     <h3>Habilidades Técnicas</h3>
-                    <p>Lenguajes de programación (Java, Python, Ensamblador, Matlab, VHDL). </p>
-                    <div> <p>MATLAB Onramp – MathWorks (2024)</p></div>
-                    <div> <p>Modelación 3D (FreeCAD).</p></div>
+                    <p>Lenguajes de programación (Java, Python, Ensamblador, Matlab, VHDL).</p>
+                    <p>MATLAB Onramp – MathWorks (2024)</p>
+                    <p>Modelación 3D (FreeCAD).</p>
                 </div>
                 <div class="skill-group">
                     <h3>Idiomas</h3>
-                    <div><p>Español (Nativa).</p></div>
-                    <div> <p>Inglés (Fluido - Cambridge Proficiency Certificate C2).</p> </div>
+                    <p>Español (Nativa).</p>
+                    <p>Inglés (Fluido - Cambridge Proficiency Certificate C2).</p>
                 </div>
                 <div class="skill-group">
                     <h3>Habilidades Transversales</h3>
@@ -571,7 +611,7 @@
                 <article class="about-item">
                     <div class="about-meta">
                         <h3>Tutora Particular.</h3>
-                        <div><p>Apoyo académico individualizado a estudiante de Educación Secundaria Obligatoria (ESO), con refuerzo en todas las materias, especialmente Matemáticas, Física y Lengua Castellana.</p></div>
+                        <p>Apoyo académico individualizado a estudiante de Educación Secundaria Obligatoria (ESO), con refuerzo en todas las materias, especialmente Matemáticas, Física y Lengua Castellana.</p>
                     </div>
                 </article>
 
@@ -582,7 +622,7 @@
                 <article class="about-item">
                     <div class="about-meta">
                         <h3>Voluntaria en centro de actividades infantiles.</h3>
-                        <div><p>Cuidado y acompañamiento de niños de 2 años durante actividades comunitarias. Organización de juegos y dinámicas educativas.</p></div>
+                        <p>Cuidado y acompañamiento de niños de 2 años durante actividades comunitarias. Organización de juegos y dinámicas educativas.</p>
                     </div>
                 </article>
 
@@ -593,7 +633,7 @@
                 <article class="about-item">
                     <div class="about-meta">
                         <h3>Operadora de cámara.</h3>
-                        <div><p>Grabación de eventos comunitarios en directo con cámara profesional.</p></div>
+                        <p>Grabación de eventos comunitarios en directo con cámara profesional.</p>
                     </div>
                 </article>
 
