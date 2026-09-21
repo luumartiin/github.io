@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Proyecto pastillero</title>
+    <title>Proyecto Pastillero</title>
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -103,9 +103,10 @@
             letter-spacing: 0px;
             font-size: 18px;
             font-weight: 400;
-            display: inline-block;
+            display: block;
             transform: scaleY(1.2);
             margin-bottom: 1.2rem;
+            line-height: 1.6;
         }
 
         /* DESCRIPCIÓN EN PÁRRAFO COMPLETO */
@@ -118,17 +119,17 @@
             font-weight: 400;
             line-height: 1.6;
             margin-bottom: 1.2rem;
-            display: inline-block;
+            display: block;
             transform: scaleY(1.2);
         }
 
-        /* ESTILO PARA LA IMAGEN PEQUEÑA DE LA DERECHA */
+        /* ESTILO PARA LAS IMÁGENES PEQUEÑAS DE LA DERECHA */
         .detail-info img.small-img {
             max-width: 85%;
             height: auto;
             display: block;
             margin-top: 1rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
         }
 
         @media (max-width: 800px) {
@@ -145,7 +146,7 @@
 <body>
 
     <nav class="back-nav">
-        <a href="index.html" class="back-btn">← Volver al Portfolio</a>
+        <a href="../index.html" class="back-btn">← Volver al Portfolio</a>
     </nav>
 
     <main class="detail-container">
@@ -153,15 +154,15 @@
         <!-- Columna izquierda con los vídeos -->
         <div class="detail-image"> 
             <video autoplay loop muted playsinline controls>
-                <source src="video1.mov" type="video/mp4">
+                <source src="../static/media/video1.mov" type="video/mp4">
                 Tu navegador no soporta la reproducción de este vídeo.
             </video>
             <video autoplay loop muted playsinline controls>
-                <source src="video2.mov" type="video/mp4">
+                <source src="../static/media/video2.mov" type="video/mp4">
                 Tu navegador no soporta la reproducción de este vídeo.
             </video>  
             <video autoplay loop muted playsinline controls>
-                <source src="video3.mov" type="video/mp4">
+                <source src="../static/media/video3.mov" type="video/mp4">
                 Tu navegador no soporta la reproducción de este vídeo.
             </video>
         </div>
@@ -171,21 +172,15 @@
             <h3>PASTILLERO</h3>
             <p class="meta">Proyecto de modelación 3D con desarrollo electrónico. 2026.</p>
             
-            <!-- Imagen reducida -->
-             
-            <img src="foto1.heic" alt="resultado final" class="small-img">
-            <img src="fotofinal.jpg" alt="resultado final" class="small-img">
+            <!-- Imágenes secundarias -->
+            <img src="../static/images/foto1.heic" alt="Proceso de diseño" class="small-img">
+            <img src="../static/images/fotofinal.jpg" alt="Resultado final" class="small-img">
 
-            <p class="meta">Dispositivo diseñado para automatizar la medicación diaria en personas
-                 mayores o con deterioro cognitivo.</p>
+            <p class="meta">Dispositivo diseñado para automatizar la medicación diaria en personas mayores o con deterioro cognitivo.</p>
             
-            <div><p class="description">
-                 El sistema integra una aplicación para el móvil
-                para cuidadores o personal sanitario, un pastillero, construido mediante impresión 3D, 
-                que selecciona y desplaza automáticamente la dosis correspondiente al compartimento de salida, 
-                y un reloj con alerta por vibración sincronizado con el pastillero.</p></div>
-            <div><p class="description">Al recibir el aviso táctil en la muñeca, el usuario simplemente recoge la dosis ya lista, garantizando una toma accesible, segura y sin confusiones
-            </p></div>
+            <p class="description">El sistema integra una aplicación para el móvil para cuidadores o personal sanitario, un pastillero, construido mediante impresión 3D, que selecciona y desplaza automáticamente la dosis correspondiente al compartimento de salida, y un reloj con alerta por vibración sincronizado con el pastillero.</p>
+            
+            <p class="description">Al recibir el aviso táctil en la muñeca, el usuario simplemente recoge la dosis ya lista, garantizando una toma accesible, segura y sin confusiones.</p>
         </div>
 
     </main>

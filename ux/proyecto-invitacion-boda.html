@@ -93,7 +93,7 @@
             margin-bottom: 1.2rem;
         }
 
-        /* METADATOS */
+        /* METADATOS Y PÁRRAFOS */
         .detail-info p.meta {
             color: rgba(0, 0, 0, 1);
             font-family: "Instrument Serif", serif;
@@ -101,27 +101,15 @@
             letter-spacing: 0px;
             font-size: 18px;
             font-weight: 400;
-            display: inline-block;
+            display: block;
             transform: scaleY(1.2);
             margin-bottom: 1.2rem;
-        }
-
-        /* DESCRIPCIÓN */
-        .detail-info p.description {
-            color: rgba(0, 0, 0, 1);
-            font-family: "Instrument Serif", serif;
-            font-style: normal;
-            letter-spacing: 0px;
-            font-size: 18px;
-            font-weight: 400;
-            display: inline-block;
-            transform: scaleY(1.2);
-            margin-bottom: 1.2rem;
+            line-height: 1.6;
         }
 
         /* ESTILO PARA LA IMAGEN PEQUEÑA DE LA DERECHA */
         .detail-info img.small-img {
-            max-width: 85%; /* Ajusta el ancho porcentual a tu gusto */
+            max-width: 85%;
             height: auto;
             display: block;
             margin-top: 1rem;
@@ -142,15 +130,15 @@
 <body>
 
     <nav class="back-nav">
-        <a href="index.html" class="back-btn">← Volver al Portfolio</a>
+        <a href="../index.html" class="back-btn">← Volver al Portfolio</a>
     </nav>
 
     <main class="detail-container">
         
         <div class="detail-image"> 
-            <img src="Sobre _001-Photoroom.png" alt="Sobre artesanal con gofrado">
-            <img src="Invitación 1_001-3.jpg" alt="Invitación principal">  
-            <img src="Invitación 1_001-Photoroom.jpg" alt="Invitación de boda en interior">
+            <img src="../static/images/Sobre _001-Photoroom.png" alt="Sobre artesanal con gofrado">
+            <img src="../static/images/Invitación 1_001-3.jpg" alt="Invitación principal">  
+            <img src="../static/images/Invitación 1_001-Photoroom.jpg" alt="Invitación de boda en interior">
         </div>
 
         <div class="detail-info">
@@ -158,14 +146,10 @@
             <p class="meta">Sevilla. 2026.</p>
             
             <!-- Imagen reducida -->
-            <img src="IMG_7006.HEIC" alt="Detalle proceso de caligrafía" class="small-img">
+            <img src="../static/images/IMG_7006.HEIC" alt="Detalle proceso de caligrafía" class="small-img">
 
-            <div> <p class="meta"> Desarrollo de 200 invitaciones para 400 invitados. </p></div>
-              <div> <p class="meta"> En el proyecto se priorizó desde el primer
-                 instante el valor del trabajo hecho a mano, buscando el detalle y textura únicas que aportan 
-                 las técnicas tradicionales frente a los acabados puramente digitales. Las ilustraciones originales en acuarela 
-                 y la caligrafía a pluma se crearon de manera totalmente artesanal para, posteriormente, ser digitalizadas e impresas
-                 a gran escala.</p></div>
+            <p class="meta">Desarrollo de 200 invitaciones para 400 invitados.</p>
+            <p class="meta">En el proyecto se priorizó desde el primer instante el valor del trabajo hecho a mano, buscando el detalle y textura únicas que aportan las técnicas tradicionales frente a los acabados puramente digitales. Las ilustraciones originales en acuarela y la caligrafía a pluma se crearon de manera totalmente artesanal para, posteriormente, ser digitalizadas e impresas a gran escala.</p>
         </div>
 
     </main>
